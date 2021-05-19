@@ -19,23 +19,23 @@ Check this [link](https://#) to see demo.
 
 #### Login Page
 
-<img src="screenshots/login.png" alt="login" width="800" />
+<img src="screenshots/login.jpg" alt="login" width="800" />
 
 #### Dashboard
 
-<img src="screenshots/dashboard.png" alt="dashboard" width="800" />
+<img src="screenshots/dashboard.jpg" alt="dashboard" width="800" />
 
 #### Create Event
 
-<img src="screenshots/create-event.png" alt="login" width="800" />
+<img src="screenshots/create-event.jpg" alt="login" width="800" />
 
 #### Create Job Announcement
 
-<img src="screenshots/create-job-announcement.png" alt="login" width="800" />
+<img src="screenshots/create-job-announcement.jpg" alt="login" width="800" />
 
 #### Make Donation
 
-<img src="screenshots/make-donation.png" alt="login" width="800" />
+<img src="screenshots/make-donation.jpg" alt="login" width="800" />
 
 ### Installation
 
