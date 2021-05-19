@@ -13,29 +13,29 @@
 
 ### Demo
 
-Check this [link](https://#) to see demo.
+Check this [link](https://alumni-seven.vercel.app/login) to see demo.
 
 ### Screenshots
 
 #### Login Page
 
-<img src="screenshots/login.png" alt="login" width="800" />
+<img src="screenshots/login.jpg" alt="login" width="800" />
 
 #### Dashboard
 
-<img src="screenshots/dashboard.png" alt="dashboard" width="800" />
+<img src="screenshots/dashboard.jpg" alt="dashboard" width="800" />
 
 #### Create Event
 
-<img src="screenshots/create-event.png" alt="login" width="800" />
+<img src="screenshots/create-event.jpg" alt="event" width="800" />
 
 #### Create Job Announcement
 
-<img src="screenshots/create-job-announcement.png" alt="login" width="800" />
+<img src="screenshots/create-job-announcement.jpg" alt="job" width="800" />
 
 #### Make Donation
 
-<img src="screenshots/make-donation.png" alt="login" width="800" />
+<img src="screenshots/make donation.jpg" alt="donation" width="800" />
 
 ### Installation
 
