@@ -1,0 +1,590 @@
+@import "../abstracts/variables";
+
+#root {
+  background-color: $dashboard-bg;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  top: 0;
+  height: 8rem;
+  width: 100vw;
+  border-bottom: 1px solid $gray-2;
+  background-color: white;
+  z-index: 999;
+
+  .logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid $gray-2;
+  }
+
+  .search-container {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid $gray-2;
+    padding: 0 3rem;
+
+    &__input-group {
+      width: 100%;
+      background-color: $search-bg;
+      border-radius: 5px;
+      display: flex;
+      overflow: hidden;
+    }
+
+    &__icon {
+      margin: 1rem 0.6rem;
+    }
+
+    &__input {
+      width: 100%;
+      background-color: $search-bg;
+      outline: none;
+      border: none;
+      font-size: 1.4rem;
+    }
+  }
+
+  .menu-container {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    border-right: 1px solid $gray-2;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &__item {
+      cursor: pointer;
+    }
+
+    &__icon {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__title {
+      font-family: "Roboto", "sans-serif";
+      font-weight: 400;
+      color: $gray-4;
+      margin-top: 0.3rem;
+    }
+
+    .active {
+      color: $active;
+    }
+  }
+
+  .profile-container {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    &__icon {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &__profile-photo {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+    }
+
+    &__group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &__title {
+      font-family: "Roboto", "sans-serif";
+      font-weight: 700;
+    }
+
+    &__subtitle {
+      font-family: "Roboto", "sans-serif";
+      font-weight: 400;
+      color: $gray-4;
+    }
+  }
+}
+
+main {
+  padding-top: 10rem;
+  padding-left: 18.5rem;
+  padding-right: 5rem;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 10.5rem;
+}
+
+.main {
+  flex: 3;
+  width: 100%;
+  height: 100%;
+
+  .new-post {
+    background-color: white;
+    border-radius: 5px;
+    padding: 3rem 2rem 1rem;
+
+    &__body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 2rem;
+
+      &__left-side {
+        display: flex;
+        width: 100%;
+
+        .avatar {
+          width: 5rem;
+          height: 5rem;
+          margin-right: 1rem;
+          border-radius: 50%;
+        }
+
+        input {
+          border: none;
+          width: 100%;
+          font-size: 1.5rem;
+          margin-right: 1rem;
+          outline: none;
+        }
+      }
+
+      &__right-side {
+        button {
+          width: 3rem;
+          height: 3rem;
+          border: none;
+          cursor: pointer;
+          background-color: transparent;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      align-items: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid $gray-2;
+
+      .item {
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        margin-right: 3rem;
+        cursor: pointer;
+
+        .icon {
+          width: 2rem;
+          height: 2rem;
+          margin-right: 0.5rem;
+        }
+
+        .title {
+          font-weight: 500;
+          color: $gray-4;
+        }
+      }
+    }
+  }
+
+  .posts {
+    .post {
+      margin-top: 2rem;
+      background-color: white;
+      border-radius: 5px;
+
+      &__header {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 2rem 0rem;
+      }
+
+      &__avatar {
+        width: 5.5rem;
+        height: 5.5rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+      }
+
+      &__fullName {
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+
+      &__jobTitle {
+        font-size: 1.4rem;
+      }
+
+      &__publishedAt {
+        display: flex;
+        align-items: center;
+
+        p {
+          font-size: 1.2rem;
+          margin-left: 0.3rem;
+        }
+      }
+
+      &__body {
+        padding: 1.5rem 2rem;
+      }
+
+      &__image {
+        margin-top: 0.5rem;
+        width: 100%;
+      }
+
+      &__footer {
+        border-top: 1px solid $gray-2;
+
+        .interactions {
+          display: flex;
+          padding: 1rem 2rem;
+
+          .interaction {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-right: 5rem;
+
+            p {
+              margin-left: 0.75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar {
+  padding-bottom: 2rem;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+
+  .profile-card {
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    border: 1px solid $gray-2;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &__top-content {
+      flex: 2;
+      background-image: url("../../images/login-bg.png");
+    }
+
+    &__bottom-content {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    &__container {
+      position: absolute;
+      bottom: 20%;
+    }
+
+    &__avatar {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+    }
+
+    &__name {
+      font-size: 2.7rem;
+    }
+
+    &__job {
+      font-size: 1.6rem;
+      font-weight: 300;
+    }
+
+    &__graduate-badge {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: $graduate-bg;
+      border-radius: 5px;
+
+      span {
+        margin-left: 0.6rem;
+        font-size: 1.4rem;
+        color: $gray-4;
+      }
+    }
+  }
+
+  .upcoming-events-card {
+    background-color: white;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: 1px solid $gray-2;
+    padding: 1rem;
+
+    &__top-content {
+      display: flex;
+      align-items: center;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $gray-2;
+
+      .icon {
+        width: 2.5rem;
+      }
+
+      .title {
+        margin-left: 0.75rem;
+        color: $gray-4;
+      }
+    }
+
+    &__body {
+      padding: 1rem 0;
+
+      .events__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+
+        &__left-side {
+          display: flex;
+        }
+
+        &__logo {
+          width: 4rem;
+          height: 4rem;
+          margin-right: 0.5rem;
+        }
+
+        &__title {
+          color: $gray-4;
+          font-weight: 500;
+        }
+
+        &__subtitle {
+          font-size: 1.3rem;
+        }
+
+        &__right-side {
+          display: flex;
+        }
+
+        &__attendees {
+          position: relative;
+
+          .attendee {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .people-card {
+    background-color: white;
+    border: 1px solid $gray-2;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+
+    &__top-content {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $gray-2;
+      padding-bottom: 0.5rem;
+
+      .icon {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      .title {
+        margin-left: 0.5rem;
+        color: $gray-4;
+      }
+    }
+
+    &__body {
+      .people__item {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__left-side {
+          display: flex;
+          align-items: center;
+        }
+
+        &__avatar {
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          margin-right: 1rem;
+        }
+
+        &__fullName {
+          font-weight: 500;
+        }
+
+        &__jobTitle {
+          font-size: 1.3rem;
+        }
+
+        &__button {
+          padding: 0.5rem 1.5rem;
+          background-color: $primary;
+          color: white;
+          border-radius: 3px;
+          border: 0px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.low-opacity {
+  opacity: 20%;
+}
+
+.modal-wrapper {
+  position: absolute;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: fixed;
+  top: 25vh;
+  background-color: white;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid $gray-2;
+
+    button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__photo {
+    padding: 1rem 1rem 0rem;
+  }
+
+  &__body {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid $gray-2;
+    border-radius: 5px;
+
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 0.5rem;
+
+      .flex-2 {
+        flex: 2 !important;
+      }
+
+      .flex-3 {
+        flex: 3 !important;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex: 1;
+        font-size: 1.3rem;
+
+        label {
+          color: $gray-4;
+        }
+
+        input,
+        textarea {
+          border: 1px solid $gray-3;
+          border-radius: 5px;
+          padding: 0.75rem 0.4rem;
+          font-size: 1.3rem;
+          margin-top: 0.3rem;
+          margin-bottom: 1rem;
+        }
+
+        input[type="date"] {
+          padding: 0.5rem 0.4rem;
+        }
+      }
+
+      .radio-group {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+
+        .radio {
+          display: flex;
+          gap: 0.3rem;
+        }
+      }
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: flex-end;
+
+      .btn {
+        margin-left: 1rem;
+        padding: 1rem 3rem;
+        font-size: 1.4rem;
+        border-radius: 5px;
+        background-color: $primary;
+        color: white;
+        border: none;
+        cursor: pointer;
+
+        &--warning {
+          background-color: $warning;
+        }
+      }
+    }
+  }
+}

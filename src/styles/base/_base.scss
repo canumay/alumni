@@ -1,0 +1,17 @@
+// Base Styles
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $gray-5;
+  background-color: $gray-2;
+  margin: 0;
+}
