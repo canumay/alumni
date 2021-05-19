@@ -13,7 +13,7 @@
 
 ### Demo
 
-Check this [link](https://#) to see demo.
+Check this [link](https://alumni-seven.vercel.app/login) to see demo.
 
 ### Screenshots
 
