@@ -590,7 +590,7 @@ function Dashboard() {
               </div>
               <div className="button-group">
                 <button className="btn btn--warning" onClick={e => handleButton(e)}>Discard</button>
-                <button className="btn" onClick={e => handleButton(e)}>Continue</button>
+                <button className="btn" onClick={e => handleButton(e)}>Complete</button>
               </div>
             </form>
           </div>
