@@ -140,6 +140,11 @@ function Dashboard() {
     setPostText("");
   }
 
+  const handleButton = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    setActiveModal("none");
+  }
+
   return (
     <>
       <header className={activeModal !== "none" ? "low-opacity" : ""} onClick={e => activeModal !== 'none' && setActiveModal('none')}>
@@ -420,8 +425,8 @@ function Dashboard() {
                 </div>
               </div>
               <div className="button-group">
-                <button className="btn btn--warning">Discard</button>
-                <button className="btn" onClick={e => e.preventDefault()}>Create</button>
+                <button className="btn btn--warning" onClick={e => handleButton(e)}>Discard</button>
+                <button className="btn" onClick={e => handleButton(e)}>Create</button>
               </div>
             </form>
           </div>
@@ -492,8 +497,8 @@ function Dashboard() {
                 </div>
               </div>
               <div className="button-group">
-                <button className="btn btn--warning">Discard</button>
-                <button className="btn" onClick={e => e.preventDefault()}>Create</button>
+                <button className="btn btn--warning" onClick={e => handleButton(e)}>Discard</button>
+                <button className="btn" onClick={e => handleButton(e)}>Create</button>
               </div>
             </form>
           </div>
@@ -584,8 +589,8 @@ function Dashboard() {
                 </div>
               </div>
               <div className="button-group">
-                <button className="btn btn--warning">Discard</button>
-                <button className="btn" onClick={e => e.preventDefault()}>Continue</button>
+                <button className="btn btn--warning" onClick={e => handleButton(e)}>Discard</button>
+                <button className="btn" onClick={e => handleButton(e)}>Continue</button>
               </div>
             </form>
           </div>
